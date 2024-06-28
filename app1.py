@@ -49,11 +49,11 @@ input_data = pd.DataFrame({
 # Display the input options and the predicted result
 st.title('Restaurant Revenue Prediction')
 image=Image.open('img.jpeg')
-st.image(input_data.drop(columns=['Location', 'Number of Reviews', 'Parking Availability']))
+st.image(image, '')
 
 
 st.write('### Options Chosen')
-st.write(input_data)
+st.write(input_data.drop(columns=['Location', 'Number of Reviews', 'Parking Availability']))
 
 # Predict and display the result
 if st.sidebar.button('Predict Revenue'):
